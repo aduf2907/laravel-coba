@@ -20,10 +20,28 @@
                     aria-label="Search">
             </form>
 
+            @auth
+            <div class="text-end pt-3">
+                <ul class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Welcome back, {{ auth()->user()->name }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/posts">Posts</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/logout">logout</a></li>
+                    </ul>
+                </ul>
+            </div>
+            @else
             <div class="text-end">
                 <a href="/login" class="btn btn-outline-light me-2">Login</a>
                 <a href="/register" class="btn btn-warning">Register</a>
             </div>
+            @endauth
         </div>
     </div>
 </header>
