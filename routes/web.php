@@ -18,7 +18,7 @@ use Illuminate\Auth\Events\Login;
 */
 
 //ini buat beranda
-Route::get('/', [PostsController::class, 'home']);
+Route::get('/', [PostsController::class, 'home'])->middleware('auth');
 
 //ini buat posts
 Route::get('/posts', [PostsController::class, 'index']);
@@ -29,11 +29,12 @@ Route::put('/posts/edit/{id}', [PostsController::class, 'update']);
 Route::get('/posts/delete/{id}', [PostsController::class, 'destroy']);
 
 //buat login
-Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'auth']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 //buat register
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']); //method buat nyimpen
 
 // Route::get('/posts', function () {
