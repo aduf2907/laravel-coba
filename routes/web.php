@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Auth\Events\Login;
 
 /*
@@ -28,6 +29,9 @@ Route::get('/posts/delete/{id}', [PostsController::class, 'destroy']);
 
 //buat login
 Route::get('/login', [LoginController::class, 'index']);
+
+//buat register
+Route::get('/register', [RegisterController::class, 'index']);
 
 // Route::get('/posts', function () {
 //     return view('posts.create');

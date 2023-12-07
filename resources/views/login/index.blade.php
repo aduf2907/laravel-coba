@@ -2,7 +2,7 @@
 @section('container')
 <main class="form-signin w-100 m-auto">
     <form>
-        <h1 class="h3 my-3 fw-normal">Please sign in</h1>
+        <h1 class="h3 my-5 fw-normal text-center">Please sign in</h1>
 
         <div class="form-floating">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
@@ -20,7 +20,7 @@
             </label>
         </div>
         <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
+        <small class="d-block mt-3 text-center">Not registered? <a href="/register">Register Now!</a></small>
     </form>
 </main>
 @endsection
