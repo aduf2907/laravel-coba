@@ -33,7 +33,8 @@
                     <label for="exampleFormControlInput1" class="form-label">Konten</label>
                 </div>
                 <div class="col-4">
-                    <input class="form-control" type="text" name="konten" value="{{ $post->konten }}" required>
+                    <textarea class="form-control" name="konten" cols="30" rows="10" maxlength="255"
+                        value="{{ $post->konten }}" required>{{ $post->konten }}</textarea>
                 </div>
             </div>
         </div>
@@ -53,6 +54,4 @@
 <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Konten</label>
     <input class="form-control" type="text">
-</div> --}}
-
-@endsection
+</div> --}} @endsection

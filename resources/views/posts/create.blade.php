@@ -32,7 +32,8 @@
                     <label for="exampleFormControlInput1" class="form-label">Konten</label>
                 </div>
                 <div class="col-4">
-                    <input class="form-control" type="text" name="konten" required>
+                    <textarea class="form-control" name="konten" cols="30" rows="10" maxlength="255"
+                        required></textarea>
                 </div>
             </div>
         </div>

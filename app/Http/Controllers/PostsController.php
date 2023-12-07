@@ -19,6 +19,11 @@ class PostsController extends Controller
         return view('posts.index', ['posts' => $posts, 'name' => 'Fikri']);
     }
 
+    public function home(){
+        $posts = Posts::all();
+        return view('beranda', ['posts' => $posts]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

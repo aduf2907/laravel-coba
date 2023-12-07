@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\LoginController;
+use Illuminate\Auth\Events\Login;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +16,8 @@ use App\Http\Controllers\PostsController;
 |
 */
 
-Route::get('/', function () {
-    return view('beranda');
-});
+//ini buat beranda
+Route::get('/', [PostsController::class, 'home']);
 
 Route::get('/posts', [PostsController::class, 'index']);
 Route::get('/posts/create', [PostsController::class, 'create']);
@@ -23,6 +25,9 @@ Route::post('/posts/store', [PostsController::class, 'store']);
 Route::get('/posts/edit/{id}', [PostsController::class, 'edit']);
 Route::put('/posts/edit/{id}', [PostsController::class, 'update']);
 Route::get('/posts/delete/{id}', [PostsController::class, 'destroy']);
+
+//buat login
+Route::get('/login', [LoginController::class, 'index']);
 
 // Route::get('/posts', function () {
 //     return view('posts.create');
