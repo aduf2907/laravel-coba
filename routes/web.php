@@ -20,6 +20,7 @@ use Illuminate\Auth\Events\Login;
 //ini buat beranda
 Route::get('/', [PostsController::class, 'home']);
 
+//ini buat posts
 Route::get('/posts', [PostsController::class, 'index']);
 Route::get('/posts/create', [PostsController::class, 'create']);
 Route::post('/posts/store', [PostsController::class, 'store']);
@@ -32,6 +33,7 @@ Route::get('/login', [LoginController::class, 'index']);
 
 //buat register
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']); //method buat nyimpen
 
 // Route::get('/posts', function () {
 //     return view('posts.create');

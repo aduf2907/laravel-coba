@@ -21,8 +21,8 @@
             </form>
 
             <div class="text-end">
-                <a href="/login" type="button" class="btn btn-outline-light me-2">Login</a>
-                <button type="button" class="btn btn-warning">Sign-up</button>
+                <a href="/login" class="btn btn-outline-light me-2">Login</a>
+                <a href="/register" class="btn btn-warning">Register</a>
             </div>
         </div>
     </div>
